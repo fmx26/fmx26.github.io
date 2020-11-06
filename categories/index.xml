@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Categories on 这是用Hugo建立的一个网站</title>
+    <link>https://github.com/fmx26/fmx26.github.io/categories/</link>
+    <description>Recent content in Categories on 这是用Hugo建立的一个网站</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <copyright>除非特别声明，本站采用[Creative Commons Attribution 4.0 International license](https://creativecommons.org/licenses/by-sa/4.0/). [沪ICP备案号123456](htpp://www.www.com)</copyright><atom:link href="https://github.com/fmx26/fmx26.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>

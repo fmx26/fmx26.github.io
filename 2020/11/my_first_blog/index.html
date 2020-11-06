@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<meta property="og:title" content="Hugo 使用教程" />
+<meta property="og:description" content="1 Hugo简介
+搭建个人博客有很多开源的博客框架，我们要介绍的框架叫作Hugo。Hugo 是一个基于Go 语言的框架，可以快速方便的创建自己的博客。
+Hugo 支持Markdown 语法，我们可以将自己的文章写成Markdown 的格式，放在我们用Hugo 创建的博客系统中，从而展示给他人。" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://github.com/fmx26/fmx26.github.io/2020/11/my_first_blog/" />
+<meta property="article:published_time" content="2020-11-06T00:38:09+08:00" />
+<meta property="article:modified_time" content="2020-11-06T00:38:09+08:00" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Hugo 使用教程"/>
+<meta name="twitter:description" content="1 Hugo简介
+搭建个人博客有很多开源的博客框架，我们要介绍的框架叫作Hugo。Hugo 是一个基于Go 语言的框架，可以快速方便的创建自己的博客。
+Hugo 支持Markdown 语法，我们可以将自己的文章写成Markdown 的格式，放在我们用Hugo 创建的博客系统中，从而展示给他人。"/>
+<meta name="generator" content="Hugo 0.78.0" />
+
+
+    
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Hugo 使用教程",
+  "url": "https://github.com/fmx26/fmx26.github.io/2020/11/my_first_blog/",
+  "wordCount": "126",
+  "datePublished": "2020-11-06T00:38:09+08:00",
+  "dateModified": "2020-11-06T00:38:09+08:00",
+  "author": {
+    "@type": "Person",
+    "name": "Mengxue Fan"
+  }
+}
+</script>
+
+
+
+    <link rel="canonical" href="https://github.com/fmx26/fmx26.github.io/2020/11/my_first_blog/">
+
+    <title>Hugo 使用教程 | 这是用Hugo建立的一个网站</title>
+
+    
+    <!-- combined, minified CSS -->
+    
+    <link href="https://github.com/fmx26/fmx26.github.io/css/style.5d58a30416f5690c488cf94bd56f1113e9f14c81a39218ffc1aa174eb6075c6f.css" rel="stylesheet" integrity="sha256-XVijBBb1aQxIjPlL1W8RE&#43;nxTIGjkhj/waoXTrYHXG8=" crossorigin="anonymous">
+    
+
+    <!-- minified Font Awesome for SVG icons -->
+    
+    <script defer src="https://github.com/fmx26/fmx26.github.io/js/fontawesome.min.c2d34ae470d4364e967a03cbc95a35eb82a4b87fb52a0a31bb7d41856f8af682.js" integrity="sha256-wtNK5HDUNk6WegPLyVo164KkuH&#43;1Kgoxu31BhW&#43;K9oI=" crossorigin="anonymous"></script>
+
+    <!-- RSS 2.0 feed -->
+    
+
+    
+
+  </head>
+
+  <body>
+
+    
+    <div class="blog-masthead">
+      <div class="container">
+        <nav class="nav blog-nav">
+          <a class="nav-link " href="https://github.com/fmx26/fmx26.github.io">首页</a>
+        </nav>
+      </div>
+    </div>
+    
+
+    
+    
+    <header class="blog-header">
+      <div class="container">
+        <h1 class="blog-title" dir="auto"><a href="https://github.com/fmx26/fmx26.github.io" rel="home">这是用Hugo建立的一个网站</a></h1>
+        <p class="lead blog-description" dir="auto">我使用Hugo建立的个人博客 ，记录我的学习历程.</p>
+      </div>
+    </header>
+    
+    
+
+    
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-8 blog-main">
+
+          
+
+
+<article class="blog-post">
+  <header>
+    <h2 class="blog-post-title" dir="auto"><a href="https://github.com/fmx26/fmx26.github.io/2020/11/my_first_blog/">Hugo 使用教程</a></h2>
+    <p class="blog-post-meta">
+<time datetime="2020-11-06T00:38:09+08:00">Fri Nov 06, 2020</time>
+</p>
+  </header>
+  <h2 id="1-hugo简介">1 Hugo简介</h2>
+<p>搭建个人博客有很多开源的博客框架，我们要介绍的框架叫作Hugo。Hugo 是一个基于Go 语言的框架，可以快速方便的创建自己的博客。</p>
+<p>Hugo 支持Markdown 语法，我们可以将自己的文章写成Markdown 的格式，放在我们用Hugo 创建的博客系统中，从而展示给他人。</p>
+<h2 id="2-安装hugo">2 安装Hugo</h2>
+<h3 id="21-前提">2.1 前提</h3>
+<ul>
+<li>先要有一个Github账号</li>
+<li>下载Hugo <a href="https://www.gohugo.org/">下载地址</a></li>
+<li>下载Git <a href="https://git-scm.com/">下载地址</a></li>
+</ul>
+<h3 id="22-hugo的安装">2.2 Hugo的安装</h3>
+<p>hugo下载解压好以后放到任意目录，建议与未来网页目录放在一起。
+添加环境变量，复制hugo.exe路径，添加到环境变量Path，这样是为了在所有的目录下都可以运行hugo,步骤如下图</p>
+<h3 id="23-hugo是否安装成功">2.3 Hugo是否安装成功</h3>
+<p>不管在哪种系统中安装Hugo，最后我们都可以使用下面命令查看Hugo 是否安装成功：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh"> hugo version
+</code></pre></div><h2 id="3-使用hugo来生成博客">3 使用Hugo来生成博客</h2>
+<h3 id="31-创建站点">3.1 创建站点</h3>
+<p>hugo 安装成功后，使用hugo new site 命令创建博客：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">  hugo new site myblog
+</code></pre></div><p>这样我的 E:\hugo 里面就生成了一个 mybolg 文件夹，那么这个文件夹就代表着我们的博客网站</p>
+<p><img src="http://m.qpic.cn/psc?/V53JcJ4a0n3CMR1HA4sj0PKUQ82V1Wqe/45NBuzDIW489QBoVep5mcRZECebJqN0zxcLTCxTYQGeNPXHg.*yjulhqXUxU1URUGswQ1L*.pYBmeOXQLUkCLkL8*NY03h6MysxdIZV4FS8!/b&amp;bo=kAMAAQAAAAADF6A!&amp;rf=viewer_4" alt=" "></p>
+<h3 id="32-选择-hugo-主题并克隆至本地目录">3.2 选择 Hugo 主题并克隆至本地目录</h3>
+<p>打开 Hugo Themes 页面，选择一个你喜欢的主题 <a href="https://themes.gohugo.io">Hugo Themes:</a>
+这里以主题 hugo-theme-bootstrap4-blog 为例。
+在myblog/themes目录下运行这一段代码：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh"> pit clone https://github.com/alanorth/hugo-theme-bootstrap4-blog.git
+</code></pre></div><p>然后在myblog/themes下面就有一个hugo-theme-bootstrap4-blog的文件夹了，表示我们的主题已经下载完成了.
+<img src="http://m.qpic.cn/psc?/V53JcJ4a0n3CMR1HA4sj0PKUQ82V1Wqe/45NBuzDIW489QBoVep5mcRZECebJqN0zxcLTCxTYQGfdfZ0AUdtYG9ufr096omkzOFKZ1yiTwTdEW7YbCscH0L*3Lr50XDRbgb3yKqBln9Q!/b&amp;bo=MQOYAAAAAAADF5g!&amp;rf=viewer_4" alt=" "></p>
+<h3 id="33-创建文章">3.3 创建文章</h3>
+<p>执行如下命令会在content目录下生产一个my_first_blog.md的文件</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh"> hugo new posts/new my_first_blog.md
+</code></pre></div><p><img src="http://m.qpic.cn/psc?/V53JcJ4a0n3CMR1HA4sj0PKUQ82V1Wqe/45NBuzDIW489QBoVep5mcRZECebJqN0zxcLTCxTYQGdi08upFQq0umTb3LR4ZZmtaD.IZBsSVZXHorCQATn9sozNpM77IVWPv2TJjru6.WQ!/b&amp;bo=TQPTAAAAAAADF68!&amp;rf=viewer_4" alt=" "></p>
+<p>意思是我们在posts目录下创建了一个名为my_first_blog的博客文件，它被存放在了content目录下面，content/post/my_first_blog.md， .md是 markdown 的缩写，很多博客网站都支持markdown编辑器，比如CSDN写博客导入这个文件然后进行编辑，也可以下载 markdownPad 还有VScode等等。</p>
+<h3 id="34-运行hugo">3.4 运行Hugo</h3>
+<p>执行如下命令，指定以hugo-theme-bootstrap4-blog主题运行，浏览器打开地址 http://localhost:1313 即可查看效果</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh"> hugo server --theme <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;hugo-theme-bootstrap4-blog&#34;</span>
+</code></pre></div><p><img src="http://m.qpic.cn/psc?/V53JcJ4a0n3CMR1HA4sj0PKUQ82V1Wqe/ruAMsa53pVQWN7FLK88i5qM2mLP4P7uLPPKUrfk.jnJQ2v2cj6hjB0TQNkfEyrsJmRED4.Tp1l3uPAh.KTGp*HyVcIhJm1SHqIPTexX56yU!/b&amp;bo=DAPLAQAAAAADB.c!&amp;rf=viewer_4" alt=" "></p>
+<h2 id="4-将个人博客部署到远端服务器">4 将个人博客部署到远端服务器</h2>
+<p>点击右上角的加号
+<img src="http://m.qpic.cn/psc?/V53JcJ4a0n3CMR1HA4sj0PKUQ82V1Wqe/ruAMsa53pVQWN7FLK88i5ve7OJHwDPLpgwrta7N.Um5IIBij58lqrl5d5i6OQMwBGizJcWXTXHqMl5uEzOGP4lPAwi3C.A92kYoVKZ7DQMA!/b&amp;bo=KgSPAQAAAAADB4I!&amp;rf=viewer_4" alt=" "></p>
+<p>选择新建仓库 New repository,对仓库名字命名，我命名为：fmx26.github.io
+<img src="http://m.qpic.cn/psc?/V53JcJ4a0n3CMR1HA4sj0PKUQ82V1Wqe/ruAMsa53pVQWN7FLK88i5lePa9tju.4V*UxG2A4CsBlsBIDHG8kfur*NZT8.kIRwYaXWfGqtuPwQ3UA.S1iTQpZC8liiEYJ5O6DaOs*0eIQ!/b&amp;bo=xgPvAgAAAAADBwo!&amp;rf=viewer_4" alt=" "></p>
+<p>利用下面的代码将进行部署 (&ldquo;<a href="https://github.com/fmx26/fmx26.github.io.git%22">https://github.com/fmx26/fmx26.github.io.git&quot;</a> 替换为自己repository地址)</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh"> hugo --theme<span style="color:#f92672">=</span>hyde --baseUrl<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;https://github.com/fmx26/fmx26.github.io.git&#34;</span>
+</code></pre></div><p>这样在myblog文件夹下面就会出生成一个public文件夹，在里面存放着你的博客网站相关的信息，并且帮你转化成了一个HTML界面，接下来就是把这个public文件传到GitHub上
+首先进入 public文件夹下面</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">  git init
+</code></pre></div><p>这时候在public文件夹下面了一个.git 文件,然后</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh"> git add -A
+</code></pre></div><p>然后写一个提交信息</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh"> git commit -m <span style="color:#e6db74">&#34;这是用Hugo建立的一个网站&#34;</span>
+ git remote add origin https://github.com/fmx26/fmx26.github.io.git
+ git push -u origin master
+</code></pre></div><p>几个简单步骤，你的静态博客基本完成了，后续就是写文章和根据自己的需要调整主题的细节。</p>
+
+  
+
+  
+  <hr>
+  <footer>
+
+  
+    <section>
+    <h4>Share</h4>
+    <nav class="nav sharing-icons">
+      <a class="nav-item" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fgithub.com%2ffmx26%2ffmx26.github.io%2f2020%2f11%2fmy_first_blog%2f" title="Share on Facebook"><span class="fab fa-facebook-f fa-2x" aria-hidden="true"></span></a>
+      <a class="nav-item" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2fgithub.com%2ffmx26%2ffmx26.github.io%2f2020%2f11%2fmy_first_blog%2f" title="Share on LinkedIn"><span class="fab fa-linkedin-in fa-2x" aria-hidden="true"></span></a>
+      <a class="nav-item" href="https://twitter.com/intent/tweet?url=https%3a%2f%2fgithub.com%2ffmx26%2ffmx26.github.io%2f2020%2f11%2fmy_first_blog%2f&amp;text=Hugo%20%e4%bd%bf%e7%94%a8%e6%95%99%e7%a8%8b" title="Tweet this"><span class="fab fa-twitter fa-2x"></span></a>
+    </nav>
+  </section>
+
+  
+
+  
+  </footer>
+  
+
+</article> 
+
+
+
+        </div> <!-- /.blog-main -->
+
+        <aside class="col-sm-3 ml-auto blog-sidebar">
+  
+  <section class="sidebar-module sidebar-module-inset">
+    <h4>关于</h4>
+    <p dir="auto">欢迎访问我建立的站点，也欢迎您访问我的知乎主页 <a href="http://v4-alpha.getbootstrap.com/examples/blog/">网站站点</a>.</p>
+  </section>
+  
+
+  
+        <section class="sidebar-module">
+    <h4>最近日志</h4>
+    <ol class="list-unstyled">
+
+
+<li><a href="/fmx26/fmx26.github.io/2014/09/creating-a-new-theme/">Creating a New Theme</a></li>
+
+<li><a href="/fmx26/fmx26.github.io/2020/11/my_first_blog/">Hugo 使用教程</a></li>
+
+    </ol>
+  </section>
+
+  
+
+  
+  <section class="sidebar-module">
+    <h4>友情链接</h4>
+    <ol class="list-unstyled">
+      
+      <li><a href="https://example.com">Hugo的官方网站</a></li>
+      
+      <li><a href="https://example.org">参考文档</a></li>
+      
+    </ol>
+  </section>
+  
+</aside>
+
+
+      </div> <!-- /.row -->
+    </div> <!-- /.container -->
+    
+
+    
+    <footer class="blog-footer">
+      <p dir="auto">
+      
+      除非特别声明，本站采用<a href="https://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution 4.0 International license</a>. <a href="htpp://www.www.com">沪ICP备案号123456</a>
+      
+      </p>
+      <p>
+      <a href="#">Back to top</a>
+      </p>
+    </footer>
+    
+
+  </body>
+
+</html>
