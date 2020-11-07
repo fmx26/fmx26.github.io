@@ -1,188 +1,285 @@
 <!DOCTYPE html>
-<html lang="en" >
+<html lang='zh-CN'><meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<title>这是用Hugo建立的一个网站</title>
 
-  <head>
-    <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
+
+
+
+
+<link rel="stylesheet" href="https://github.com/fmx26/fmx26.github.io/css/eureka.css">
+
+
+
+
+<script defer src="https://github.com/fmx26/fmx26.github.io/js/eureka.min.js"></script>
+
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload"
+    href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600;700&family=Noto+Serif+SC:wght@400;600;700&display=swap"
+    as="style" onload="this.onload=null;this.rel='stylesheet'">
+<link rel="preload" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.1.0/build/styles/solarized-light.min.css" as="style"
+    onload="this.onload=null;this.rel='stylesheet'">
+<script defer src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.1.0/build/highlight.min.js"></script>
+<script async src="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.14.0/js/all.min.js" integrity="sha256-uNYoXefWRqv&#43;PsIF/OflNmwtKM4lStn9yrz2gVl6ymo="
+    crossorigin="anonymous"></script>
+
+
+
+
+
+
+
+<meta name="description"
+    content="我使用Hugo建立的个人博客 ，记录我的学习历程.">
+
+
+
 
 <meta property="og:title" content="这是用Hugo建立的一个网站" />
-<meta property="og:description" content="我使用Hugo建立的个人博客 ，记录我的学习历程." />
 <meta property="og:type" content="website" />
+
+
+
 <meta property="og:url" content="https://github.com/fmx26/fmx26.github.io/" />
-<meta property="og:updated_time" content="2020-11-06T13:12:29+08:00" />
-
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="这是用Hugo建立的一个网站"/>
-<meta name="twitter:description" content="我使用Hugo建立的个人博客 ，记录我的学习历程."/>
-<meta name="generator" content="Hugo 0.78.0" />
 
 
-    
-<script type="application/ld+json">
-{
-  "@context": "http://schema.org",
-  "@type": "Blog",
-  "headline": "这是用Hugo建立的一个网站",
-  "url" : "https://github.com/fmx26/fmx26.github.io/",
-  "author": {
-    "@type": "Person",
-    "name": "Mengxue Fan"
-  },
-  "dateModified": "2020-11-06T13:12:29+08:00",
-  "keywords": "",
-  "description":"我使用Hugo建立的个人博客 ，记录我的学习历程."
-}
+
+
+
+<meta property="og:description" content="我使用Hugo建立的个人博客 ，记录我的学习历程." />
+
+
+
+
+
+<meta property="og:locale" content="zh-CN" />
+
+
+
+
+<meta property="og:site_name" content="这是用Hugo建立的一个网站" />
+
+
+
+
+
+
+<meta property="og:updated_time" content="2020-11-06T13:12:29&#43;08:00" />
+
+
+
+<meta property="article:section" content="" />
+
+
+
+<link rel="alternate" type="application/rss+xml" href="https://github.com/fmx26/fmx26.github.io/index.xml" title="这是用Hugo建立的一个网站" />
+<body class="flex flex-col min-h-screen">
+    <header class="flex items-center fixed w-full min-h-16 z-50 bg-secondary-bg shadow-sm">
+        <div class="container mx-auto">
+            <div class="max-w-screen-xl"><script>
+    let storageColorScheme = localStorage.getItem("lightDarkMode")
+    if (((storageColorScheme == 'Auto' || storageColorScheme == null) && window.matchMedia("(prefers-color-scheme: dark)").matches)
+        || storageColorScheme == "Dark") {
+        document.getElementsByTagName('html')[0].classList.add('dark')
+    } else if (storageColorScheme == "Light") {
+        document.getElementsByTagName('html')[0].classList.remove('dark')
+    }
 </script>
+<nav class="flex items-center justify-between flex-wrap p-4">
+    <a href="https://github.com/" class="mr-6 text-primary-text text-xl font-bold">这是用Hugo建立的一个网站</a>
+    <button id="navbar-btn" class="md:hidden flex items-center px-3 py-2" aria-label="Open Navbar">
+        <i class="fas fa-bars"></i>
+    </button>
 
+    <div id="target"
+        class="hidden block md:flex md:flex-grow md:justify-between md:items-center w-full md:w-auto text-primary-text z-20">
+        <div class="text-sm md:flex-grow pb-4 md:pb-0 border-b md:border-b-0" id="current-url"
+            currenturl="https://github.com/fmx26/fmx26.github.io/">
+            
+            <a href="/fmx26/fmx26.github.io"
+                class="block mt-4 md:inline-block md:mt-0 hover:text-eureka mr-4 main-a">tutorials</a>
+            
+        </div>
 
-    <link rel="canonical" href="https://github.com/fmx26/fmx26.github.io/">
+        <div class="flex">
+            <div class="relative pt-4 md:pt-0">
+                <div class="cursor-pointer hover:text-eureka" id="lightDarkMode">
+                    <i class="fas fa-adjust"></i>
+                </div>
+                <div class="fixed hidden inset-0 opacity-0 h-full w-full cursor-default z-30" id="is-open">
+                </div>
+                <div class="absolute flex flex-col left-0 md:left-auto right-auto md:right-0 hidden bg-secondary-bg w-48 rounded py-2 border border-tertiary-bg cursor-pointer z-40"
+                    id='lightDarkOptions'>
+                    <span class="px-4 py-1 hover:text-eureka">Light</span>
+                    <span class="px-4 py-1 hover:text-eureka">Dark</span>
+                    <span class="px-4 py-1 hover:text-eureka">Auto</span>
+                </div>
+            </div>
 
-    <title>这是用Hugo建立的一个网站</title>
+            
+        </div>
+    </div>
 
+    <div class="fixed hidden inset-0 opacity-0 h-full w-full cursor-default z-0" id="is-open-mobile">
+    </div>
+
+</nav>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        getcolorscheme();
+        switchBurger();
+        
+    });
+
+    let currenturl = document.getElementById('current-url').getAttribute('currenturl')
+        if (currenturl.length > 1) {
+            currenturl = currenturl.substr(0, currenturl.length - 1)
+        }
+
+        sessionStorage.setItem("mainKey", currenturl)
+
+        let elements = document.getElementsByClassName('main-a');
+        for (let i in elements) {
+            if (typeof elements[i] === "object") {
+                let elementurl = elements[i].getAttribute('href')
+                if (elementurl.length > 1 && elementurl.charAt(elementurl.length - 1) == '/') {
+                    elementurl = elementurl.substr(0, elementurl.length - 1)
+                }
+                if (elementurl == sessionStorage.getItem("mainKey")) {
+                    elements[i].classList.add('text-eureka')
+                } else {
+                    elements[i].classList.remove('text-eureka')
+                }
+            }
+        }
+</script></div>
+        </div>
+    </header>
+
+    <main class="flex-grow pt-16">
+        
+<div class="w-full bg-secondary-bg">
+    <div class="container mx-auto">
+        <div class="max-w-screen-xl">
+            <div class="grid grid-cols-9 grid-rows-5 h-screen -mt-16">
+                
+                
+                
+                <div class="col-start-3 col-span-5 row-start-2 row-span-3 z-20">
+                    <div class="flex flex-col items-center justify-center min-h-full">
+                        <div class="bg-white bg-opacity-75 shadow-2xl -m-12 p-12">
+                            <span
+                                class="font-bold text-black text-opacity-75 text-2xl md:text-3xl"></span>
+                        </div>
+                    </div>
+                </div>
+                
+                
+                
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container mx-auto ">
+    <div class="max-w-screen-xl pt-12 md:px-4 xl:px-8">
+        
+        
+<div class="mx-4 xl:mx-16">
+    <div class="flex flex-row items-center justify-between">
+        <h2 class=" font-bold text-3xl my-4">Recent</h2>
+    </div>
+    <div class="masonry grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
+        
+        <div class="item">
+            <div class="grid-content">
+                <div class="bg-secondary-bg rounded overflow-hidden hover:shadow-lg transition ease-in-out duration-200">
     
-    <!-- combined, minified CSS -->
     
-    <link href="https://github.com/fmx26/fmx26.github.io/css/style.5d58a30416f5690c488cf94bd56f1113e9f14c81a39218ffc1aa174eb6075c6f.css" rel="stylesheet" integrity="sha256-XVijBBb1aQxIjPlL1W8RE&#43;nxTIGjkhj/waoXTrYHXG8=" crossorigin="anonymous">
-    
-
-    <!-- minified Font Awesome for SVG icons -->
-    
-    <script defer src="https://github.com/fmx26/fmx26.github.io/js/fontawesome.min.c2d34ae470d4364e967a03cbc95a35eb82a4b87fb52a0a31bb7d41856f8af682.js" integrity="sha256-wtNK5HDUNk6WegPLyVo164KkuH&#43;1Kgoxu31BhW&#43;K9oI=" crossorigin="anonymous"></script>
-
-    <!-- RSS 2.0 feed -->
-    <link rel="alternate" type="application/rss+xml" href="https://github.com/fmx26/fmx26.github.io/index.xml" title="这是用Hugo建立的一个网站" />
-    
-
-    
-
-  </head>
-
-  <body>
-
-    
-    <div class="blog-masthead">
-      <div class="container">
-        <nav class="nav blog-nav">
-          <a class="nav-link active" href="https://github.com/fmx26/fmx26.github.io">首页</a>
-        </nav>
-      </div>
+    <div class="px-6 pt-6">
+        <div class="font-bold text-xl text-primary-text mb-2">
+            <a href="https://github.com/fmx26/fmx26.github.io/2014/09/creating-a-new-theme/" class="hover:text-eureka">Creating a New Theme</a>
+        </div>
+        <div class="">Introduction This tutorial will show you how to create a simple theme in Hugo. I assume that you are familiar with HTML, the bash command line, and that you are comfortable using Markdown to format content. I&amp;rsquo;ll explain how Hugo uses templates and how you can organize your templates to create a theme.I won&amp;rsquo;t cover using CSS to style your theme.
+</div>
+    </div>
+    <div class="px-6 pb-2">
+        <div class="flex flex-wrap flex-row items-center my-2 text-tertiary-text">
+    <div class="mr-6 my-2">
+        <i class="fas fa-calendar mr-1"></i>
+        <span>2014-09-28</span>
+    </div>
+    <div class="mr-6 my-2">
+        <i class="fas fa-clock mr-1"></i>
+        <span>34 min read</span>
     </div>
     
-
-    
-    
-    <header class="blog-header">
-      <div class="container">
-        <h1 class="blog-title" dir="auto"><a href="https://github.com/fmx26/fmx26.github.io" rel="home">这是用Hugo建立的一个网站</a></h1>
-        <p class="lead blog-description" dir="auto">我使用Hugo建立的个人博客 ，记录我的学习历程.</p>
-      </div>
-    </header>
-    
     
 
     
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-8 blog-main">
-
-          
-
-
-
-
-
-
-
-<article class="blog-post">
-  <header>
-    <h2 class="blog-post-title" dir="auto"><a href="https://github.com/fmx26/fmx26.github.io/2014/09/creating-a-new-theme/">Creating a New Theme</a></h2>
-    <p class="blog-post-meta"><time datetime="2014-09-28T00:00:00Z">Sun Sep 28, 2014</time> by Mengxue Fan</p>
-  </header>
-  <h2 id="introduction">Introduction</h2>
-<p>This tutorial will show you how to create a simple theme in Hugo. I assume that you are familiar with HTML, the bash command line, and that you are comfortable using Markdown to format content. I&rsquo;ll explain how Hugo uses templates and how you can organize your templates to create a theme.I won&rsquo;t cover using CSS to style your theme.</p>
-  <a href='https://github.com/fmx26/fmx26.github.io/2014/09/creating-a-new-theme/'>更多 →</a>
-</article> 
-
-
-
-
-
-
-<article class="blog-post">
-  <header>
-    <h2 class="blog-post-title" dir="auto"><a href="https://github.com/fmx26/fmx26.github.io/2020/11/my_first_blog/">Hugo 使用教程</a></h2>
-    <p class="blog-post-meta"><time datetime="2020-11-06T00:38:09+08:00">Fri Nov 06, 2020</time> by Mengxue Fan</p>
-  </header>
-  <h2 id="1-hugo简介">1 Hugo简介</h2>
-<p>搭建个人博客有很多开源的博客框架，我们要介绍的框架叫作Hugo。Hugo 是一个基于Go 语言的框架，可以快速方便的创建自己的博客。</p>
-<p>Hugo 支持Markdown 语法，我们可以将自己的文章写成Markdown 的格式，放在我们用Hugo 创建的博客系统中，从而展示给他人。</p>
-  <a href='https://github.com/fmx26/fmx26.github.io/2020/11/my_first_blog/'>更多 →</a>
-</article> 
-
-
-
-
-
-
-
-
-        </div> <!-- /.blog-main -->
-
-        <aside class="col-sm-3 ml-auto blog-sidebar">
-  
-  <section class="sidebar-module sidebar-module-inset">
-    <h4>关于</h4>
-    <p dir="auto">欢迎访问我建立的站点，也欢迎您访问我的知乎主页 <a href="http://v4-alpha.getbootstrap.com/examples/blog/">网站站点</a>.</p>
-  </section>
-  
-
-  
-        <section class="sidebar-module">
-    <h4>最近日志</h4>
-    <ol class="list-unstyled">
-
-
-<li><a href="/fmx26/fmx26.github.io/2014/09/creating-a-new-theme/">Creating a New Theme</a></li>
-
-<li><a href="/fmx26/fmx26.github.io/2020/11/my_first_blog/">Hugo 使用教程</a></li>
-
-    </ol>
-  </section>
-
-  
-
-  
-  <section class="sidebar-module">
-    <h4>友情链接</h4>
-    <ol class="list-unstyled">
-      
-      <li><a href="https://example.com">Hugo的官方网站</a></li>
-      
-      <li><a href="https://example.org">参考文档</a></li>
-      
-    </ol>
-  </section>
-  
-</aside>
-
-
-      </div> <!-- /.row -->
-    </div> <!-- /.container -->
+</div>
+    </div>
+</div>
+            </div>
+        </div>
+        
+        <div class="item">
+            <div class="grid-content">
+                <div class="bg-secondary-bg rounded overflow-hidden hover:shadow-lg transition ease-in-out duration-200">
+    
+    
+    <div class="px-6 pt-6">
+        <div class="font-bold text-xl text-primary-text mb-2">
+            <a href="https://github.com/fmx26/fmx26.github.io/2020/11/my_first_blog/" class="hover:text-eureka">Hugo 使用教程</a>
+        </div>
+        <div class="">1 Hugo简介 搭建个人博客有很多开源的博客框架，我们要介绍的框架叫作Hugo。Hugo 是一个基于Go 语言的框架，可以快速方便的创建自己的博客。
+Hugo 支持Markdown 语法，我们可以将自己的文章写成Markdown 的格式，放在我们用Hugo 创建的博客系统中，从而展示给他人。
+</div>
+    </div>
+    <div class="px-6 pb-2">
+        <div class="flex flex-wrap flex-row items-center my-2 text-tertiary-text">
+    <div class="mr-6 my-2">
+        <i class="fas fa-calendar mr-1"></i>
+        <span>2020-11-06</span>
+    </div>
+    <div class="mr-6 my-2">
+        <i class="fas fa-clock mr-1"></i>
+        <span>1 min read</span>
+    </div>
+    
     
 
     
-    <footer class="blog-footer">
-      <p dir="auto">
-      
-      除非特别声明，本站采用<a href="https://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution 4.0 International license</a>. <a href="htpp://www.www.com">沪ICP备案号123456</a>
-      
-      </p>
-      <p>
-      <a href="#">Back to top</a>
-      </p>
+</div>
+    </div>
+</div>
+            </div>
+        </div>
+        
+    </div>
+</div>
+<script>
+    document.addEventListener('DOMContentLoaded', ()=>{
+        enableMasonry()
+    })
+</script>
+
+    </div>
+</div>
+
+        
+    </main>
+
+    <footer>
+        <div class="container mx-auto">
+            <div class="max-w-screen-xl"><footer class="w-full text-center p-6 pin-b text-sm text-tertiary-text">
+    <p>除非特别声明，本站采用[Creative Commons Attribution 4.0 International license](https://creativecommons.org/licenses/by-sa/4.0/). [沪ICP备案号123456](htpp://www.www.com) &middot;  Powered by the <a href="https://github.com/wangchucheng/hugo-eureka" class="hover:text-eureka">Eureka</a> theme for <a href="https://gohugo.io" class="hover:text-eureka">Hugo</a></p>
+</footer></div>
+        </div>
     </footer>
-    
-
-  </body>
+</body>
 
 </html>

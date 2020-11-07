@@ -1,104 +1,240 @@
 <!DOCTYPE html>
-<html lang="en" >
-
-  <head>
-    <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-<meta property="og:title" content="Creating a New Theme" />
-<meta property="og:description" content="Introduction
-This tutorial will show you how to create a simple theme in Hugo. I assume that you are familiar with HTML, the bash command line, and that you are comfortable using Markdown to format content. I&rsquo;ll explain how Hugo uses templates and how you can organize your templates to create a theme.I won&rsquo;t cover using CSS to style your theme." />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://github.com/fmx26/fmx26.github.io/2014/09/creating-a-new-theme/" />
-<meta property="article:published_time" content="2014-09-28T00:00:00+00:00" />
-<meta property="article:modified_time" content="2014-09-28T00:00:00+00:00" />
-
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Creating a New Theme"/>
-<meta name="twitter:description" content="Introduction
-This tutorial will show you how to create a simple theme in Hugo. I assume that you are familiar with HTML, the bash command line, and that you are comfortable using Markdown to format content. I&rsquo;ll explain how Hugo uses templates and how you can organize your templates to create a theme.I won&rsquo;t cover using CSS to style your theme."/>
-<meta name="generator" content="Hugo 0.78.0" />
+<html lang='zh-CN'><meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<title>Creating a New Theme | 这是用Hugo建立的一个网站</title>
 
 
-    
+
+
+
+
+
+<link rel="stylesheet" href="https://github.com/fmx26/fmx26.github.io/css/eureka.css">
+
+
+
+
+<script defer src="https://github.com/fmx26/fmx26.github.io/js/eureka.min.js"></script>
+
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload"
+    href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600;700&family=Noto+Serif+SC:wght@400;600;700&display=swap"
+    as="style" onload="this.onload=null;this.rel='stylesheet'">
+<link rel="preload" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.1.0/build/styles/solarized-light.min.css" as="style"
+    onload="this.onload=null;this.rel='stylesheet'">
+<script defer src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.1.0/build/highlight.min.js"></script>
+<script async src="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.14.0/js/all.min.js" integrity="sha256-uNYoXefWRqv&#43;PsIF/OflNmwtKM4lStn9yrz2gVl6ymo="
+    crossorigin="anonymous"></script>
+
+
+
+
+
+
+
+<meta name="description"
+    content="Introduction
+This tutorial will show you how to create a simple theme in Hugo. I assume that you are familiar with HTML, the bash command line, and that you are comfortable using Markdown to format content. I&rsquo;ll explain how Hugo uses templates and how you can organize your templates to create a theme.I won&rsquo;t cover using CSS to style your theme.">
+
+
+
+
+
 <script type="application/ld+json">
 {
-  "@context": "http://schema.org",
-  "@type": "BlogPosting",
-  "headline": "Creating a New Theme",
-  "url": "https://github.com/fmx26/fmx26.github.io/2014/09/creating-a-new-theme/",
-  "wordCount": "7231",
-  "datePublished": "2014-09-28T00:00:00+00:00",
-  "dateModified": "2014-09-28T00:00:00+00:00",
-  "author": {
-    "@type": "Person",
-    "name": "Mengxue Fan"
-  }
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [{
+"@type": "ListItem",
+"position":  4 ,
+"name": "这是用Hugo建立的一个网站",
+"item": "https://github.com/fmx26/fmx26.github.io/"
+},{
+"@type": "ListItem",
+"position":  5 ,
+"name": "Posts",
+"item": "https://github.com/fmx26/fmx26.github.io/posts/"
+},{
+"@type": "ListItem",
+"position":  6 ,
+"name": "Creating a New Theme",
+"item": "https://github.com/fmx26/fmx26.github.io/2014/09/creating-a-new-theme/"
+}]
 }
 </script>
 
 
 
-    <link rel="canonical" href="https://github.com/fmx26/fmx26.github.io/2014/09/creating-a-new-theme/">
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://github.com/fmx26/fmx26.github.io/2014/09/creating-a-new-theme/"
+    },
+    "headline": "Creating a New Theme | 这是用Hugo建立的一个网站","datePublished": "2014-09-28T00:00:00+00:00",
+    "dateModified": "2014-09-28T00:00:00+00:00",
+    "wordCount":  7231 ,
+    "publisher": {
+        "@type": "Person",
+        "name": "这是用Hugo建立的一个网站",
+        },
+    "description": "\u003ch2 id=\u0022introduction\u0022\u003eIntroduction\u003c\/h2\u003e\n\u003cp\u003eThis tutorial will show you how to create a simple theme in Hugo. I assume that you are familiar with HTML, the bash command line, and that you are comfortable using Markdown to format content. I\u0026rsquo;ll explain how Hugo uses templates and how you can organize your templates to create a theme.I won\u0026rsquo;t cover using CSS to style your theme.\u003c\/p\u003e"
+}
+</script>
 
-    <title>Creating a New Theme | 这是用Hugo建立的一个网站</title>
+<meta property="og:title" content="Creating a New Theme | 这是用Hugo建立的一个网站" />
+<meta property="og:type" content="article" />
 
-    
-    <!-- combined, minified CSS -->
-    
-    <link href="https://github.com/fmx26/fmx26.github.io/css/style.5d58a30416f5690c488cf94bd56f1113e9f14c81a39218ffc1aa174eb6075c6f.css" rel="stylesheet" integrity="sha256-XVijBBb1aQxIjPlL1W8RE&#43;nxTIGjkhj/waoXTrYHXG8=" crossorigin="anonymous">
-    
 
-    <!-- minified Font Awesome for SVG icons -->
-    
-    <script defer src="https://github.com/fmx26/fmx26.github.io/js/fontawesome.min.c2d34ae470d4364e967a03cbc95a35eb82a4b87fb52a0a31bb7d41856f8af682.js" integrity="sha256-wtNK5HDUNk6WegPLyVo164KkuH&#43;1Kgoxu31BhW&#43;K9oI=" crossorigin="anonymous"></script>
 
-    <!-- RSS 2.0 feed -->
-    
+<meta property="og:url" content="https://github.com/fmx26/fmx26.github.io/2014/09/creating-a-new-theme/" />
 
-    
 
-  </head>
 
-  <body>
 
-    
-    <div class="blog-masthead">
-      <div class="container">
-        <nav class="nav blog-nav">
-          <a class="nav-link " href="https://github.com/fmx26/fmx26.github.io">首页</a>
-        </nav>
-      </div>
+<meta property="og:description" content="Introduction
+This tutorial will show you how to create a simple theme in Hugo. I assume that you are familiar with HTML, the bash command line, and that you are comfortable using Markdown to format content. I&rsquo;ll explain how Hugo uses templates and how you can organize your templates to create a theme.I won&rsquo;t cover using CSS to style your theme." />
+
+
+
+
+<meta property="og:locale" content="zh-CN" />
+
+
+
+
+<meta property="og:site_name" content="这是用Hugo建立的一个网站" />
+
+
+
+
+
+
+<meta property="article:published_time" content="2014-09-28T00:00:00&#43;00:00" />
+
+
+<meta property="article:modified_time" content="2014-09-28T00:00:00&#43;00:00" />
+
+
+
+<meta property="article:section" content="posts" />
+
+
+
+<body class="flex flex-col min-h-screen">
+    <header class="flex items-center fixed w-full min-h-16 z-50 bg-secondary-bg shadow-sm">
+        <div class="container mx-auto">
+            <div class="max-w-screen-xl"><script>
+    let storageColorScheme = localStorage.getItem("lightDarkMode")
+    if (((storageColorScheme == 'Auto' || storageColorScheme == null) && window.matchMedia("(prefers-color-scheme: dark)").matches)
+        || storageColorScheme == "Dark") {
+        document.getElementsByTagName('html')[0].classList.add('dark')
+    } else if (storageColorScheme == "Light") {
+        document.getElementsByTagName('html')[0].classList.remove('dark')
+    }
+</script>
+<nav class="flex items-center justify-between flex-wrap p-4">
+    <a href="https://github.com/" class="mr-6 text-primary-text text-xl font-bold">这是用Hugo建立的一个网站</a>
+    <button id="navbar-btn" class="md:hidden flex items-center px-3 py-2" aria-label="Open Navbar">
+        <i class="fas fa-bars"></i>
+    </button>
+
+    <div id="target"
+        class="hidden block md:flex md:flex-grow md:justify-between md:items-center w-full md:w-auto text-primary-text z-20">
+        <div class="text-sm md:flex-grow pb-4 md:pb-0 border-b md:border-b-0" id="current-url"
+            currenturl="https://github.com/fmx26/fmx26.github.io/2014/09/creating-a-new-theme/">
+            
+            <a href="/fmx26/fmx26.github.io"
+                class="block mt-4 md:inline-block md:mt-0 hover:text-eureka mr-4 main-a">tutorials</a>
+            
+        </div>
+
+        <div class="flex">
+            <div class="relative pt-4 md:pt-0">
+                <div class="cursor-pointer hover:text-eureka" id="lightDarkMode">
+                    <i class="fas fa-adjust"></i>
+                </div>
+                <div class="fixed hidden inset-0 opacity-0 h-full w-full cursor-default z-30" id="is-open">
+                </div>
+                <div class="absolute flex flex-col left-0 md:left-auto right-auto md:right-0 hidden bg-secondary-bg w-48 rounded py-2 border border-tertiary-bg cursor-pointer z-40"
+                    id='lightDarkOptions'>
+                    <span class="px-4 py-1 hover:text-eureka">Light</span>
+                    <span class="px-4 py-1 hover:text-eureka">Dark</span>
+                    <span class="px-4 py-1 hover:text-eureka">Auto</span>
+                </div>
+            </div>
+
+            
+        </div>
+    </div>
+
+    <div class="fixed hidden inset-0 opacity-0 h-full w-full cursor-default z-0" id="is-open-mobile">
+    </div>
+
+</nav>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        getcolorscheme();
+        switchBurger();
+        
+    });
+
+    let currenturl = document.getElementById('current-url').getAttribute('currenturl')
+        if (currenturl.length > 1) {
+            currenturl = currenturl.substr(0, currenturl.length - 1)
+        }
+
+        sessionStorage.setItem("mainKey", currenturl)
+
+        let elements = document.getElementsByClassName('main-a');
+        for (let i in elements) {
+            if (typeof elements[i] === "object") {
+                let elementurl = elements[i].getAttribute('href')
+                if (elementurl.length > 1 && elementurl.charAt(elementurl.length - 1) == '/') {
+                    elementurl = elementurl.substr(0, elementurl.length - 1)
+                }
+                if (elementurl == sessionStorage.getItem("mainKey")) {
+                    elements[i].classList.add('text-eureka')
+                } else {
+                    elements[i].classList.remove('text-eureka')
+                }
+            }
+        }
+</script></div>
+        </div>
+    </header>
+
+    <main class="flex-grow pt-16">
+        
+        <div class="container mx-auto ">
+            <div class="max-w-screen-xl lg:px-4 xl:px-8">
+
+
+<div class="grid grid-cols-2 lg:grid-cols-8 gap-4 lg:pt-12">
+    <div
+        class="col-span-2 lg:col-start-2 lg:col-span-6 bg-secondary-bg rounded px-6 py-8">
+        <h1 class="font-bold text-3xl text-primary-text">Creating a New Theme</h1>
+        <div class="flex flex-wrap flex-row items-center my-2 text-tertiary-text">
+    <div class="mr-6 my-2">
+        <i class="fas fa-calendar mr-1"></i>
+        <span>2014-09-28</span>
+    </div>
+    <div class="mr-6 my-2">
+        <i class="fas fa-clock mr-1"></i>
+        <span>34 min read</span>
     </div>
     
-
-    
-    
-    <header class="blog-header">
-      <div class="container">
-        <h1 class="blog-title" dir="auto"><a href="https://github.com/fmx26/fmx26.github.io" rel="home">这是用Hugo建立的一个网站</a></h1>
-        <p class="lead blog-description" dir="auto">我使用Hugo建立的个人博客 ，记录我的学习历程.</p>
-      </div>
-    </header>
-    
     
 
     
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-8 blog-main">
-
-          
-
-
-<article class="blog-post">
-  <header>
-    <h2 class="blog-post-title" dir="auto"><a href="https://github.com/fmx26/fmx26.github.io/2014/09/creating-a-new-theme/">Creating a New Theme</a></h2>
-    <p class="blog-post-meta">
-<time datetime="2014-09-28T00:00:00Z">Sun Sep 28, 2014</time>
-</p>
-  </header>
-  <h2 id="introduction">Introduction</h2>
+</div>
+        
+        
+        <div class="content">
+            <h2 id="introduction">Introduction</h2>
 <p>This tutorial will show you how to create a simple theme in Hugo. I assume that you are familiar with HTML, the bash command line, and that you are comfortable using Markdown to format content. I&rsquo;ll explain how Hugo uses templates and how you can organize your templates to create a theme.I won&rsquo;t cover using CSS to style your theme.</p>
 <p>We&rsquo;ll start with creating a new site with a very basic template. Then we&rsquo;ll add in a few pages and posts. With small variations on that, you will be able to create many different types of web sites.</p>
 <p>In this tutorial, commands that you enter will start with the &ldquo;$&rdquo; prompt. The output will follow. Lines that start with &ldquo;#&rdquo; are comments that I&rsquo;ve added to explain a point. When I show updates to a file, the &ldquo;:wq&rdquo; on the last line means to save the file.</p>
@@ -904,90 +1040,51 @@ $ vi themes/zafta/layouts/_default/single.html
 </code></pre><p>Note that we removed the date logic from the default template and put it in the post template. Generate the web site and verify the results. Posts have dates and the about page doesn&rsquo;t.</p>
 <h3 id="dont-repeat-yourself">Don&rsquo;t Repeat Yourself</h3>
 <p>DRY is a good design goal and Hugo does a great job supporting it. Part of the art of a good template is knowing when to add a new template and when to update an existing one. While you&rsquo;re figuring that out, accept that you&rsquo;ll be doing some refactoring. Hugo makes that easy and fast, so it&rsquo;s okay to delay splitting up a template.</p>
+        </div>
+        
+        
+        
+        
+        
+        
+        
+<div class="flex flex-col md:flex-row md:justify-between -mx-2 mt-4 px-2 pt-4 border-t">
+    <div>
+        
+    </div>
+    <div class="md:text-right mt-4 md:mt-0">
+        
+        <span class="block font-bold">Next</span>
+        <a href="https://github.com/fmx26/fmx26.github.io/2020/11/my_first_blog/" class="block">Hugo 使用教程</a>
+        
+    </div>
+</div>
 
-  
-
-  
-  <hr>
-  <footer>
-
-  
-    <section>
-    <h4>Share</h4>
-    <nav class="nav sharing-icons">
-      <a class="nav-item" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fgithub.com%2ffmx26%2ffmx26.github.io%2f2014%2f09%2fcreating-a-new-theme%2f" title="Share on Facebook"><span class="fab fa-facebook-f fa-2x" aria-hidden="true"></span></a>
-      <a class="nav-item" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2fgithub.com%2ffmx26%2ffmx26.github.io%2f2014%2f09%2fcreating-a-new-theme%2f" title="Share on LinkedIn"><span class="fab fa-linkedin-in fa-2x" aria-hidden="true"></span></a>
-      <a class="nav-item" href="https://twitter.com/intent/tweet?url=https%3a%2f%2fgithub.com%2ffmx26%2ffmx26.github.io%2f2014%2f09%2fcreating-a-new-theme%2f&amp;text=Creating%20a%20New%20Theme" title="Tweet this"><span class="fab fa-twitter fa-2x"></span></a>
-    </nav>
-  </section>
-
-  
-
-  
-  </footer>
-  
-
-</article> 
-
-
-
-        </div> <!-- /.blog-main -->
-
-        <aside class="col-sm-3 ml-auto blog-sidebar">
-  
-  <section class="sidebar-module sidebar-module-inset">
-    <h4>关于</h4>
-    <p dir="auto">欢迎访问我建立的站点，也欢迎您访问我的知乎主页 <a href="http://v4-alpha.getbootstrap.com/examples/blog/">网站站点</a>.</p>
-  </section>
-  
-
-  
-        <section class="sidebar-module">
-    <h4>最近日志</h4>
-    <ol class="list-unstyled">
-
-
-<li><a href="/fmx26/fmx26.github.io/2014/09/creating-a-new-theme/">Creating a New Theme</a></li>
-
-<li><a href="/fmx26/fmx26.github.io/2020/11/my_first_blog/">Hugo 使用教程</a></li>
-
-    </ol>
-  </section>
-
-  
-
-  
-  <section class="sidebar-module">
-    <h4>友情链接</h4>
-    <ol class="list-unstyled">
-      
-      <li><a href="https://example.com">Hugo的官方网站</a></li>
-      
-      <li><a href="https://example.org">参考文档</a></li>
-      
-    </ol>
-  </section>
-  
-</aside>
-
-
-      </div> <!-- /.row -->
-    </div> <!-- /.container -->
+        
+    </div>
     
 
     
-    <footer class="blog-footer">
-      <p dir="auto">
-      
-      除非特别声明，本站采用<a href="https://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution 4.0 International license</a>. <a href="htpp://www.www.com">沪ICP备案号123456</a>
-      
-      </p>
-      <p>
-      <a href="#">Back to top</a>
-      </p>
+    
+</div>
+<script>
+    document.addEventListener('DOMContentLoaded', ()=>{
+        hljs.initHighlightingOnLoad();
+    })
+</script>
+
+            </div>
+        </div>
+        
+    </main>
+
+    <footer>
+        <div class="container mx-auto">
+            <div class="max-w-screen-xl"><footer class="w-full text-center p-6 pin-b text-sm text-tertiary-text">
+    <p>除非特别声明，本站采用[Creative Commons Attribution 4.0 International license](https://creativecommons.org/licenses/by-sa/4.0/). [沪ICP备案号123456](htpp://www.www.com) &middot;  Powered by the <a href="https://github.com/wangchucheng/hugo-eureka" class="hover:text-eureka">Eureka</a> theme for <a href="https://gohugo.io" class="hover:text-eureka">Hugo</a></p>
+</footer></div>
+        </div>
     </footer>
-    
-
-  </body>
+</body>
 
 </html>
