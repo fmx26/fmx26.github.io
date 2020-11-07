@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>这是用Hugo建立的一个网站</title>
+    <link>https://fmx26.github.io/</link>
+    <description>Recent content on 这是用Hugo建立的一个网站</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <copyright>除非特别声明，本站采用[Creative Commons Attribution 4.0 International license](https://creativecommons.org/licenses/by-sa/4.0/). [沪ICP备案号123456](htpp://www.www.com)</copyright>
+    <lastBuildDate>Fri, 06 Nov 2020 00:38:09 +0800</lastBuildDate><atom:link href="https://fmx26.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Creating a New Theme</title>
+      <link>https://fmx26.github.io/2014/09/creating-a-new-theme/</link>
+      <pubDate>Sun, 28 Sep 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://fmx26.github.io/2014/09/creating-a-new-theme/</guid>
+      <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;This tutorial will show you how to create a simple theme in Hugo. I assume that you are familiar with HTML, the bash command line, and that you are comfortable using Markdown to format content. I&amp;rsquo;ll explain how Hugo uses templates and how you can organize your templates to create a theme.I won&amp;rsquo;t cover using CSS to style your theme.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Migrate to Hugo from Jekyll</title>
+      <link>https://fmx26.github.io/2014/03/migrate-from-jekyll/</link>
+      <pubDate>Mon, 10 Mar 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://fmx26.github.io/2014/03/migrate-from-jekyll/</guid>
+      <description>Move static content to static Jekyll has a rule that any directory not starting with _ will be copied as-is to the _site output. Hugo keeps all static content under static. You should therefore move it all there. With Jekyll, something that looked like
+▾ &amp;lt;root&amp;gt;/▾ images/logo.png should become</description>
+    </item>
+    
+    <item>
+      <title>Hugo 使用教程</title>
+      <link>https://fmx26.github.io/2020/11/my_first_blog/</link>
+      <pubDate>Fri, 06 Nov 2020 00:38:09 +0800</pubDate>
+      
+      <guid>https://fmx26.github.io/2020/11/my_first_blog/</guid>
+      <description>&lt;h2 id=&#34;1-hugo简介&#34;&gt;1 Hugo简介&lt;/h2&gt;
+&lt;p&gt;搭建个人博客有很多开源的博客框架，我们要介绍的框架叫作Hugo。Hugo 是一个基于Go 语言的框架，可以快速方便的创建自己的博客。&lt;/p&gt;
+&lt;p&gt;Hugo 支持Markdown 语法，我们可以将自己的文章写成Markdown 的格式，放在我们用Hugo 创建的博客系统中，从而展示给他人。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>(Hu)go Template Primer</title>
+      <link>https://fmx26.github.io/2014/04/goisforlovers/</link>
+      <pubDate>Wed, 02 Apr 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://fmx26.github.io/2014/04/goisforlovers/</guid>
+      <description>Hugo uses the excellent go html/template library for its template engine. It is an extremely lightweight engine that provides a very small amount of logic. In our experience that it is just the right amount of logic to be able to create a good static website. If you have used other template systems from different languages or frameworks you will find a lot of similarities in go templates.</description>
+    </item>
+    
+    <item>
+      <title>Getting Started with Hugo</title>
+      <link>https://fmx26.github.io/2014/04/hugoisforlovers/</link>
+      <pubDate>Wed, 02 Apr 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://fmx26.github.io/2014/04/hugoisforlovers/</guid>
+      <description>Step 1. Install Hugo Goto hugo releases and download the appropriate version for your os and architecture.
+Save it somewhere specific as we will be using it in the next step.
+More complete instructions are available at installing hugo
+Step 2. Build the Docs Hugo has its own example site which happens to also be the documentation site you are reading right now.</description>
+    </item>
+    
+  </channel>
+</rss>
